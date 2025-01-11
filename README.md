@@ -11,6 +11,7 @@ all folders go under your '.config' directory, with 'wallpapers' being optional 
 - kitty [(homepage)](https://github.com/kovidgoyal/kitty) [(arch package)](https://archlinux.org/packages/extra/x86_64/kitty/)
 - polybar [(homepage)](https://github.com/polybar/polybar) [(arch package)](https://archlinux.org/packages/extra/x86_64/polybar/)
 - fastfetch [(homepage)](https://github.com/fastfetch-cli/fastfetch) [(arch package)](https://archlinux.org/packages/extra/x86_64/fastfetch/)
+- nerd fonts [(homepage)](https://www.nerdfonts.com/) [(arch package)](https://archlinux.org/groups/x86_64/nerd-fonts/)
 
 # notes
 if you have a pre-established openbox 'rc.xml' that you do not want to edit the functionality of, just simply take the theming elements from the 'rc.xml' belonging to this repo and replace yours with it.
