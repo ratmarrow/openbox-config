@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+
+<menu id="programs-menu" label="Programs">
+  <item label="Vesktop">
+    <action name="Execute">
+      <command>vesktop</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Steam">
+    <action name="Execute">
+      <command>steam</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Godot Engine">
+    <action name="Execute">
+      <command>godot-mono</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+</menu>
+
+<menu id="power-menu" label="Power">
+
+  <item label="Log Out">
+      <action name="Exit">
+        <prompt>yes</prompt>
+      </action>
+  </item>
+
+  <item label="Shutdown">
+    <action name="Execute">
+      <prompt>Are you sure you want to shut down the computer?</prompt>
+      <command>systemctl poweroff</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+
+  <item label="Reboot">
+    <action name="Execute">
+      <prompt>Are you sure you want to reboot the computer?</prompt>
+      <command>systemctl reboot</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  
+</menu>
+
+<menu id="control-menu" label="Control Panel">
+
+  <item label="Reload Openbox">
+    <action name="Reconfigure" />
+  </item>
+
+  <separator />
+  
+  <item label="Easy Effects">
+    <action name="Execute">
+      <command>easyeffects</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+
+  <item label="NVIDIA Settings">
+    <action name="Execute">
+      <command>nvidia-settings</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+
+  <item label="Volume">
+    <action name="Execute">
+      <command>pavucontrol</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  
+  <item label="GTK Theming">
+    <action name="Execute">
+      <command>lxappearance</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+
+  <item label="Network">
+    <action name="Execute">
+      <command>kitty -T "Network Manager" sh -c "nmtui"</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  
+</menu>
+
+<menu id="root-menu" label="Openbox 3">
+  <separator label="Applications" />
+  <menu id="programs-menu"/>
+
+  <separator />
+  
+  <item label="Nemo">
+    <action name="Execute">
+      <command>nemo</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  
+  <item label="Firefox">
+    <action name="Execute">
+      <command>firefox</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+        <wmclass>Firefox</wmclass>
+      </startupnotify>
+    </action>
+  </item>
+  
+  <item label="Kitty">
+    <action name="Execute">
+      <command>kitty</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  
+  <separator label="System" />
+  
+  <menu id="control-menu"/>
+  
+  <separator />
+  
+  <menu id="power-menu" />
+  
+</menu>
+
+</openbox_menu>
